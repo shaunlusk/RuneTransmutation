@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Rune Transmutation</title>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Common/Utils.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Common/Queue.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Common/PriorityQueue.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Common/UniquePriorityQueue.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Color.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Constants.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/EventType.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Event.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Screen.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/PixPathTypes.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/CharacterMap.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/CharacterRenderer.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/Layer.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/TextPrompt.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/TextLayer.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/GfxLayer.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElementZIndexComparable.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElement.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/TextElement.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/TextLink.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/TextButton.js"></script>
+  <script type="text/javascript" src="./lib/GameBoard.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+#content {
+  margin : auto
+}
+</style>
+</head>
+<body>
+  <div id="content">
+  </div>
+  <script type="text/javascript">
+  var RuneTx = RuneTx || {};
+  RuneTx.GameContext = RuneTx.GameContext || {};
+
+  var config = {
+      "rows" : 28,
+      "cols" : 40,
+      "scaleX" : 2,
+      "scaleY" : 2,
+      "borderColor" : C64Style.Color.WHITE,
+      "borderSize" : 3,
+      "backgroundColor" : C64Style.Color.BLACK
+    };
+
+  var screen = null, textLayer = null, gfxLayer;
+  var gameboard = null;
+
+  function initialize(targetDiv, config) {
+
+    // Create the C64 Screen
+    screen = new C64Style.Screen(targetDiv, config);
+    screen.initialize();
+    textLayer = screen.createLayer("TextLayer");
+    gfxLayer = screen.createLayer("GfxLayer");
+    screen.render();
+
+    gameboard = new RuneTx.GameBoard(screen, textLayer, 10,10);
+    gameboard.update();
+  }
+
+  initialize(document.getElementById("content"), config);
+  </script>
+</body>
+</html>

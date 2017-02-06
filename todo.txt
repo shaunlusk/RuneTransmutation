@@ -1,0 +1,16 @@
+
+pick random rune and color
+
+follow mouse
+
+onclick:
+  try drop rune
+
+  if dropped, add to foreground, change background color
+  otherwise, do nothing
+
+  check for full rows/cols
+    any: clear
+
+    check for fully converted board
+    

@@ -1,0 +1,28 @@
+{
+  "name": "runetransmutation",
+  "homepage": "https://github.com/shaunlusk/RuneTransmutation",
+  "authors": [
+    "Shaun Lusk <shaun.lusk@gmail.com>"
+  ],
+  "description": "Transform the game board using runes.",
+  "main": "index.html",
+  "keywords": [
+    "game",
+    "rune",
+    "c64",
+    "commodore",
+    "64",
+    "c64style",
+    "javascript",
+    "canvas"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "C64Style": "c64style#^0.1.0"
+  }
+}
