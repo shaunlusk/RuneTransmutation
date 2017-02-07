@@ -18,12 +18,18 @@
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextPrompt.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextLayer.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxLayer.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/PixRenderer.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElementZIndexComparable.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElement.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextElement.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/PixElement.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextLink.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextButton.js"></script>
+  <script type="text/javascript" src="./lib/Utils.js"></script>
+  <script type="text/javascript" src="./lib/RuneMaps.js"></script>
+  <script type="text/javascript" src="./lib/RuneTile.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
+  <script type="text/javascript" src="./lib/GameEngine.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 #content {
@@ -48,8 +54,8 @@
       "backgroundColor" : C64Style.Color.BLACK
     };
 
-  var screen = null, textLayer = null, gfxLayer;
-  var gameboard = null;
+  var screen = null, textLayer = null, gfxLayer, floatLayer;
+  var gameboard = null, gameEngine = null;
 
   function initialize(targetDiv, config) {
 
@@ -58,10 +64,21 @@
     screen.initialize();
     textLayer = screen.createLayer("TextLayer");
     gfxLayer = screen.createLayer("GfxLayer");
+    floatLayer = screen.createLayer("GfxLayer");
     screen.render();
 
-    gameboard = new RuneTx.GameBoard(screen, textLayer, 10,10);
-    gameboard.update();
+    var props = {
+      levelDefinitions : [
+        {
+          runes : ["fehu"],
+          runeColors : [C64Style.Color.WHITE],
+          rows : 3,
+          cols : 3
+        }
+      ]
+    };
+    gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
+    gameEngine.startRound(0);
   }
 
   initialize(document.getElementById("content"), config);
