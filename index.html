@@ -28,6 +28,8 @@
   <script type="text/javascript" src="./lib/Utils.js"></script>
   <script type="text/javascript" src="./lib/RuneMaps.js"></script>
   <script type="text/javascript" src="./lib/RuneTile.js"></script>
+  <script type="text/javascript" src="./lib/BoardBackground.js"></script>
+  <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
   <script type="text/javascript" src="./lib/GameEngine.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -68,10 +70,13 @@
     screen.render();
 
     var props = {
+      boardOffsetX : 128,
+      boardOffsetY : 64,
       levelDefinitions : [
         {
           runes : ["fehu"],
           runeColors : [C64Style.Color.WHITE],
+          boardColors : [C64Style.Color.DARKGREY, C64Style.Color.LIGHTGREEN],
           rows : 3,
           cols : 3
         }
