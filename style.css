@@ -34,3 +34,7 @@ a {
   border-color: white;
   border-width: 2px;
 }
+
+table, th, td {
+    border: 1px solid white;
+}

@@ -28,6 +28,7 @@
   <script type="text/javascript" src="./lib/Utils.js"></script>
   <script type="text/javascript" src="./lib/RuneMaps.js"></script>
   <script type="text/javascript" src="./lib/RuneTile.js"></script>
+  <script type="text/javascript" src="./lib/RuneCell.js"></script>
   <script type="text/javascript" src="./lib/BoardBackground.js"></script>
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
@@ -41,6 +42,13 @@
 </head>
 <body>
   <div id="content">
+  </div>
+  <div id="mouseInfo" style="padding:20 0 0 0;">
+    <table>
+      <tr><td>x</td><td width="32px">&nbsp;</td><td>y</td><td width="32px">&nbsp;</td></tr>
+      <tr><td>scaledX</td><td>&nbsp;</td><td>scaledY</td><td>&nbsp;</td></tr>
+      <tr><td>col</td><td>&nbsp;</td><td>row</td><td>&nbsp;</td></tr>
+    </table>
   </div>
   <script type="text/javascript">
   var RuneTx = RuneTx || {};
@@ -64,14 +72,29 @@
     // Create the C64 Screen
     screen = new C64Style.Screen(targetDiv, config);
     screen.initialize();
+
+    screen.on("MOUSE_MOVE", function(e) {
+      var elem = document.getElementById("mouseInfo");
+      var boardCoords = gameEngine._getBoardCoords(e);
+      elem.innerHTML = "<table>" +
+      "<tr><td>x</td><td width='32px'>" + e.data.x + "</td><td>y</td><td width='32px'>" + e.data.y + "</td></tr>" +
+        "<tr><td>scaledX</td><td width='32px'>" + e.data.scaledX + "</td><td>scaledY</td><td width='32px'>" + e.data.scaledY + "</td></tr>" +
+        "<tr><td>col</td><td width='32px'>" + e.data.col + "</td><td>row</td><td width='32px'>" + e.data.row + "</td></tr>" +
+        "<tr><td>boardX</td><td width='32px'>" + boardCoords.x + "</td><td>boardY</td><td width='32px'>" + boardCoords.y + "</td></tr>" +
+        "</table>";
+    });
+    // screen.on("MOUSE_UP", function(e) {
+    //   console.log(e.data);
+    // });
+
     textLayer = screen.createLayer("TextLayer");
     gfxLayer = screen.createLayer("GfxLayer");
     floatLayer = screen.createLayer("GfxLayer");
     screen.render();
 
     var props = {
-      boardOffsetX : 128,
-      boardOffsetY : 64,
+      boardOffsetX : 32,
+      boardOffsetY : 32,
       levelDefinitions : [
         {
           runes : ["fehu"],
