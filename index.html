@@ -20,6 +20,7 @@
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxLayer.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/PixRenderer.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElementZIndexComparable.js"></script>
+  <script type="text/javascript" src="./bower_components/C64Style/lib/MoveOrder.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/GfxElement.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/TextElement.js"></script>
   <script type="text/javascript" src="./bower_components/C64Style/lib/PixElement.js"></script>
@@ -83,10 +84,6 @@
         "<tr><td>boardX</td><td width='32px'>" + boardCoords.x + "</td><td>boardY</td><td width='32px'>" + boardCoords.y + "</td></tr>" +
         "</table>";
     });
-    // screen.on("MOUSE_UP", function(e) {
-    //   console.log(e.data);
-    // });
-
     textLayer = screen.createLayer("TextLayer");
     gfxLayer = screen.createLayer("GfxLayer");
     floatLayer = screen.createLayer("GfxLayer");
@@ -97,11 +94,11 @@
       boardOffsetY : 16,
       levelDefinitions : [
         {
-          runes : ["fehu"],
-          runeColors : [C64Style.Color.WHITE],
-          boardColors : [C64Style.Color.DARKGREY, C64Style.Color.LIGHTGREEN],
-          rows : 3,
-          cols : 3
+          runes : ["fehu", "mannaz"],
+          runeColors : [C64Style.Color.WHITE, C64Style.Color.BLUE, C64Style.Color.GREEN],
+          boardColors : [C64Style.Color.DARKGREY, C64Style.Color.GREY],
+          rows : 6,
+          cols : 6
         }
       ]
     };
