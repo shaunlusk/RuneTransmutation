@@ -34,6 +34,7 @@
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
   <script type="text/javascript" src="./lib/GameEngine.js"></script>
+  <script type="text/javascript" src="LevelDefinitions.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 #content {
@@ -92,18 +93,7 @@
     var props = {
       boardOffsetX : 16,
       boardOffsetY : 16,
-      levelDefinitions : [
-        {
-          runes : ["fehu", "mannaz", "uruz", "thurisaz"],
-          runeColors : [C64Style.Color.YELLOW, C64Style.Color.LIGHTBLUE, C64Style.Color.GREEN],
-          boardColors : [C64Style.Color.DARKGREY, C64Style.Color.BLUE],
-          rows : 7,
-          cols : 7,
-          startingRune : "ingwaz",
-          startingRuneX : 3,
-          startingRuneY : 3
-        }
-      ]
+      levelDefinitions : levelDefinitions
     };
     gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
     gameEngine.startRound(0);
