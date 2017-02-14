@@ -1,11 +1,14 @@
 
 score
 high score
+save score
+
+save board
 
 discard rune
   graveyard
   click
-  
+
 transition to next level
 
 end game
