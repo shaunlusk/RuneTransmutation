@@ -93,7 +93,9 @@
     var props = {
       boardOffsetX : 16,
       boardOffsetY : 16,
-      levelDefinitions : levelDefinitions
+      levelDefinitions : levelDefinitions,
+      discardsAllowed : 3,
+      graveOffsets : {x:1, y:18}
     };
     gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
     gameEngine.startRound(0);
