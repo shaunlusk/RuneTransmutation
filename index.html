@@ -30,6 +30,7 @@
   <script type="text/javascript" src="./lib/RuneMaps.js"></script>
   <script type="text/javascript" src="./lib/RuneTile.js"></script>
   <script type="text/javascript" src="./lib/RuneCell.js"></script>
+  <script type="text/javascript" src="./lib/GraveyardRenderer.js"></script>
   <script type="text/javascript" src="./lib/BoardBackground.js"></script>
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
@@ -95,7 +96,7 @@
       boardOffsetY : 16,
       levelDefinitions : levelDefinitions,
       discardsAllowed : 3,
-      graveOffsets : {x:1, y:18}
+      graveOffsets : {x:1 * C64Style.CELLWIDTH, y:18 * C64Style.CELLHEIGHT}
     };
     gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
     gameEngine.startRound(0);
