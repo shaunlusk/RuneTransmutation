@@ -96,7 +96,9 @@
       boardOffsetY : 16,
       levelDefinitions : levelDefinitions,
       discardsAllowed : 3,
-      graveOffsets : {x:1 * C64Style.CELLWIDTH, y:18 * C64Style.CELLHEIGHT}
+      // graveOffsets : {x:1 * C64Style.CELLWIDTH, y:18 * C64Style.CELLHEIGHT}
+      graveOffsetX : 1 *  C64Style.CELLWIDTH,
+      graveOffsetY : 18 * C64Style.CELLHEIGHT
     };
     gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
     gameEngine.startRound(0);

@@ -13,4 +13,4 @@ transition to next level
 
 end game
 
-change graveyard offsets to individual x & y instead of object
+tranfser rune directly from float to foregroundLayer
