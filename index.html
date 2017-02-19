@@ -89,6 +89,7 @@
     textLayer = screen.createLayer("TextLayer");
     gfxLayer = screen.createLayer("GfxLayer");
     floatLayer = screen.createLayer("GfxLayer");
+    textFloatLayer = screen.createLayer("GfxLayer");
     screen.render();
 
     var props = {
@@ -96,11 +97,15 @@
       boardOffsetY : 16,
       levelDefinitions : levelDefinitions,
       discardsAllowed : 3,
-      // graveOffsets : {x:1 * C64Style.CELLWIDTH, y:18 * C64Style.CELLHEIGHT}
       graveOffsetX : 1 *  C64Style.CELLWIDTH,
-      graveOffsetY : 18 * C64Style.CELLHEIGHT
+      graveOffsetY : 18 * C64Style.CELLHEIGHT,
+      screenContext: screen,
+      backgroundLayer: textLayer,
+      foregroundLayer: gfxLayer,
+      floatLayer: floatLayer,
+      textFloatLayer: textFloatLayer
     };
-    gameEngine = new RuneTx.GameEngine(screen, textLayer, gfxLayer, floatLayer, props);
+    gameEngine = new RuneTx.GameEngine(props);
     gameEngine.startRound(0);
   }
 

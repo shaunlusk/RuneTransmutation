@@ -1,3 +1,13 @@
+transition to next level
+  stop responding to input
+  fade layers
+  show level complete text
+  next level button
+    on click:
+    new board
+    show level text
+    delay
+    fade in
 
 score
 high score
@@ -5,12 +15,7 @@ save score
 
 save board
 
-discard rune
-  graveyard
-  click
-
-transition to next level
-
 end game
 
-tranfser rune directly from float to foregroundLayer
+transfer rune directly from float to foregroundLayer
+-- but will not be dirty - how to fix?
