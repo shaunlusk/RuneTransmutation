@@ -30,6 +30,7 @@
   <script type="text/javascript" src="./lib/RuneMaps.js"></script>
   <script type="text/javascript" src="./lib/RuneTile.js"></script>
   <script type="text/javascript" src="./lib/RuneCell.js"></script>
+  <script type="text/javascript" src="./lib/BackgroundLayer.js"></script>
   <script type="text/javascript" src="./lib/GraveyardRenderer.js"></script>
   <script type="text/javascript" src="./lib/BoardBackground.js"></script>
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
@@ -86,7 +87,9 @@
         "<tr><td>boardX</td><td width='32px'>" + boardCoords.x + "</td><td>boardY</td><td width='32px'>" + boardCoords.y + "</td></tr>" +
         "</table>";
     });
-    textLayer = screen.createLayer("TextLayer");
+
+    textLayer = new RuneTx.BackgroundLayer(screen, RuneTx.createCanvas(targetDiv, screen.getWidth(), screen.getHeight()), {width:screen.getWidth(), height:screen.getHeight()});
+    screen.addLayer(textLayer);
     gfxLayer = screen.createLayer("GfxLayer");
     floatLayer = screen.createLayer("GfxLayer");
     textFloatLayer = screen.createLayer("GfxLayer");

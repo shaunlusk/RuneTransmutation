@@ -1,13 +1,3 @@
-transition to next level
-  stop responding to input
-  fade layers
-  show level complete text
-  next level button
-    on click:
-    new board
-    show level text
-    delay
-    fade in
 
 score
 high score
@@ -19,3 +9,6 @@ end game
 
 transfer rune directly from float to foregroundLayer
 -- but will not be dirty - how to fix?
+
+engine level character renderer
+ ``` pix renderer?
