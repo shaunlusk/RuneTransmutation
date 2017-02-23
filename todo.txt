@@ -12,3 +12,7 @@ transfer rune directly from float to foregroundLayer
 
 engine level character renderer
  ``` pix renderer?
+
+replace game engine event notification system with mixin from common
+
+-- rethink when things are being drawn
