@@ -5,7 +5,12 @@ save score
 
 save board
 
+placement indicator
+
+rune box for mobile
+
 end game
+  prevent click event
 
 transfer rune directly from float to foregroundLayer
 -- but will not be dirty - how to fix?
