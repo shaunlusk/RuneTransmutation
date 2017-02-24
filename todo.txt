@@ -1,8 +1,21 @@
 
 save score
 high score
-
 save board
+
+save stuff:
+  event on score change
+  event on level update
+  event on place rune - update board state save
+    - format?
+  event on discard rune - engine level
+
+  new game should remove curent game save info: score, level, graveyard state, board state
+
+  ** on initialize, check level def version vs. saved version; delete in compatible data
+
+restore stuff:
+
 
 placement indicator
 
