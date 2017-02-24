@@ -1,7 +1,6 @@
 
-score
-high score
 save score
+high score
 
 save board
 
@@ -9,8 +8,10 @@ placement indicator
 
 rune box for mobile
 
+new game button
+
 end game
-  prevent click event
+  prevent click event - probably done
 
 transfer rune directly from float to foregroundLayer
 -- but will not be dirty - how to fix?
