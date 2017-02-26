@@ -1,3 +1,7 @@
+bugs:
+  button placement
+  new game button remains active after being CLICKED
+
 
 save score
 high score
