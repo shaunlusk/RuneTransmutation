@@ -4,7 +4,6 @@ bugs:
 
 
 save score
-high score
 save board
 
 save stuff:
@@ -17,6 +16,13 @@ save stuff:
   new game should remove curent game save info: score, level, graveyard state, board state
 
   ** on initialize, check level def version vs. saved version; delete in compatible data
+
+  need to capture
+  rune cell depth index
+  runetile, if Any
+
+  probbaly need to modify grave renderer to accept rune tiles, not just elements
+
 
 restore stuff:
 
