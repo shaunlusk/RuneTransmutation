@@ -1,0 +1,33 @@
+screen
+  mousemove tracking doesn't need to calculate row/col til event is actually issued
+
+###############################################################################
+### Future work
+###############################################################################
+Additional Character Maps
+  PERSON = [{"type":"PIXEL","x":2,"y":0,"color":"#000000"},{"type":"PIXEL","x":3,"y":0,"color":"#000000"},{"type":"PIXEL","x":4,"y":0,"color":"#000000"},{"type":"PIXEL","x":5,"y":0,"color":"#000000"},{"type":"PIXEL","x":2,"y":1,"color":"#000000"},{"type":"PIXEL","x":3,"y":1,"color":"#000000"},{"type":"PIXEL","x":4,"y":1,"color":"#000000"},{"type":"PIXEL","x":5,"y":1,"color":"#000000"},{"type":"PIXEL","x":3,"y":2,"color":"#000000"},{"type":"PIXEL","x":4,"y":2,"color":"#000000"},{"type":"PIXEL","x":0,"y":3,"color":"#000000"},{"type":"PIXEL","x":1,"y":3,"color":"#000000"},{"type":"PIXEL","x":2,"y":3,"color":"#000000"},{"type":"PIXEL","x":3,"y":3,"color":"#000000"},{"type":"PIXEL","x":4,"y":3,"color":"#000000"},{"type":"PIXEL","x":5,"y":3,"color":"#000000"},{"type":"PIXEL","x":6,"y":3,"color":"#000000"},{"type":"PIXEL","x":7,"y":3,"color":"#000000"},{"type":"PIXEL","x":0,"y":4,"color":"#000000"},{"type":"PIXEL","x":1,"y":4,"color":"#000000"},{"type":"PIXEL","x":3,"y":4,"color":"#000000"},{"type":"PIXEL","x":4,"y":4,"color":"#000000"},{"type":"PIXEL","x":6,"y":4,"color":"#000000"},{"type":"PIXEL","x":7,"y":4,"color":"#000000"},{"type":"PIXEL","x":2,"y":5,"color":"#000000"},{"type":"PIXEL","x":3,"y":5,"color":"#000000"},{"type":"PIXEL","x":4,"y":5,"color":"#000000"},{"type":"PIXEL","x":5,"y":5,"color":"#000000"},{"type":"PIXEL","x":1,"y":6,"color":"#000000"},{"type":"PIXEL","x":2,"y":6,"color":"#000000"},{"type":"PIXEL","x":5,"y":6,"color":"#000000"},{"type":"PIXEL","x":6,"y":6,"color":"#000000"},{"type":"PIXEL","x":0,"y":7,"color":"#000000"},{"type":"PIXEL","x":1,"y":7,"color":"#000000"},{"type":"PIXEL","x":6,"y":7,"color":"#000000"},{"type":"PIXEL","x":7,"y":7,"color":"#000000"}]
+  7 & 1 = chalice?
+tools
+  C64PixMapExtractor - linux shell script
+Change variable names from "screen" to a something else (screen exists in browser)
+make move order work with pause
+screen
+  separate element mouse down events? - separate from mouse down/up/over?
+throw error on unimplemented methods in layer?
+option for disabling collision checking - and force full clear and redraw?
+ability set sprite frame idx manually, turn off frame duration
+per layer events
+  before / after render
+loading indicator & demo
+change size for pixmap builder?
+textSprite?
+Bounds checking on text layer?
+Text wrapping on text layer?
+extract "on" function in screen, gfxelement, to its own mixin component
+
+
+###############################################################################
+### Known issues
+###############################################################################
+MoveOrders do not take pause into account and so will tend to cause elements to "jump" to final destination when screen is resumed.
+This is probably ok though: in text layer, strings that are rendered in same frame may be written on top of eachother without clearing (clearing comes before drawing)
