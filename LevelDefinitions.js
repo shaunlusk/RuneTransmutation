@@ -1,4 +1,8 @@
-var levelDefinitions = [
+var RuneTx = RuneTx || {};
+
+RuneTx.levelDefinitionsVersion = '0.0.0';
+
+RuneTx.levelDefinitions = [
   {
     runes : ["fehu", "mannaz", "uruz", "thurisaz"],
     runeColors : [C64Style.Color.YELLOW, C64Style.Color.LIGHTBLUE, C64Style.Color.GREEN],

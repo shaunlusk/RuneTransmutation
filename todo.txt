@@ -1,10 +1,9 @@
 bugs:
+  graveyard not displaying runes discarded when moving to new level
   button placement
   new game button remains active after being CLICKED
 
-
-save score
-save board
+level display
 
 save stuff:
   event on score change
@@ -28,7 +27,7 @@ restore stuff:
 
 
 placement indicator
-
+hide new game button between levels
 rune box for mobile
 
 new game button
