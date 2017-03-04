@@ -1,5 +1,4 @@
 bugs:
-  graveyard not displaying runes discarded when moving to new level
   button placement
   new game button remains active after being CLICKED
   new game button disappears after new level and discard max
@@ -7,24 +6,7 @@ bugs:
 level display
 
 save stuff:
-  event on score change
-  event on level update
-  event on place rune - update board state save
-    - format?
-  event on discard rune - engine level
-
-  new game should remove curent game save info: score, level, graveyard state, board state
-
   ** on initialize, check level def version vs. saved version; delete in compatible data
-
-  need to capture
-  rune cell depth index
-  runetile, if Any
-
-  probbaly need to modify grave renderer to accept rune tiles, not just elements
-
-
-restore stuff:
 
 
 placement indicator
