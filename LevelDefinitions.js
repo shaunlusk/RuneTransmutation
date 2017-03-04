@@ -4,6 +4,16 @@ RuneTx.levelDefinitionsVersion = '0.0.0';
 
 RuneTx.levelDefinitions = [
   {
+    runes : ["fehu"],
+    runeColors : [C64Style.Color.YELLOW, C64Style.Color.LIGHTBLUE, C64Style.Color.GREEN],
+    boardColors : [C64Style.Color.DARKGREY, C64Style.Color.BLUE],
+    rows : 3,
+    cols : 3,
+    startingRune : "ingwaz",
+    startingRuneX : 1,
+    startingRuneY : 1
+  },
+  {
     runes : ["fehu", "mannaz", "uruz", "thurisaz"],
     runeColors : [C64Style.Color.YELLOW, C64Style.Color.LIGHTBLUE, C64Style.Color.GREEN],
     boardColors : [C64Style.Color.DARKGREY, C64Style.Color.BLUE],

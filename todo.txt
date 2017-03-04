@@ -1,7 +1,6 @@
 bugs:
   button placement
   new game button remains active after being CLICKED
-  new game button disappears after new level and discard max
 
 level display
 

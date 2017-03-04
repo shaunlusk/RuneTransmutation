@@ -23,6 +23,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "C64Style": "c64style#^0.1.1"
+    "C64Style": "c64style#^0.1.2"
   }
 }
