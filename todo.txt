@@ -2,6 +2,7 @@ bugs:
   graveyard not displaying runes discarded when moving to new level
   button placement
   new game button remains active after being CLICKED
+  new game button disappears after new level and discard max
 
 level display
 
@@ -30,7 +31,7 @@ placement indicator
 hide new game button between levels
 rune box for mobile
 
-new game button
+persist current rune - prevent refresh cheating
 
 end game
   prevent click event - probably done
