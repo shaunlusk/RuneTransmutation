@@ -36,11 +36,11 @@
   <script type="text/javascript" src="./lib/BackgroundLayer.js"></script>
   <script type="text/javascript" src="./lib/ScoreRenderer.js"></script>
   <script type="text/javascript" src="./lib/GraveyardRenderer.js"></script>
+  <script type="text/javascript" src="./lib/LevelRenderer.js"></script>
   <script type="text/javascript" src="./lib/BoardBackground.js"></script>
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
-  <script type="text/javascript" src="./lib/GameSaver.js"></script>
-  <script type="text/javascript" src="./lib/GameLoader.js"></script>
+  <script type="text/javascript" src="./lib/GameStorage.js"></script>
   <script type="text/javascript" src="./lib/GameEngine.js"></script>
   <script type="text/javascript" src="LevelDefinitions.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -107,9 +107,10 @@
     textFloatLayer.identifier = "textFloat";
 
     var props = {
-      boardOffsetX : 16,
-      boardOffsetY : 16,
-      levelDefinitions : levelDefinitions,
+      boardOffsetX : 32,
+      boardOffsetY : 8,
+      levelDefinitions : RuneTx.levelDefinitions,
+      levelDefinitionsVersion : RuneTx.levelDefinitionsVersion,
       discardsAllowed : 3,
       graveOffsetX : 1 *  C64Style.CELLWIDTH,
       graveOffsetY : 18 * C64Style.CELLHEIGHT,
@@ -120,7 +121,12 @@
       textFloatLayer: textFloatLayer
     };
     gameEngine = new RuneTx.GameEngine(props);
-    gameEngine.startRound(0);
+    if (RuneTx.GameStorage.savedGameExists()) {
+      gameEngine.loadSavedGame();
+    } else {
+      gameEngine.initializeSaveGame();
+      gameEngine.startRound(0);
+    }
   }
 
   initialize(document.getElementById("content"), config);

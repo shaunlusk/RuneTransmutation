@@ -1,37 +1,10 @@
 bugs:
-  button placement
   new game button remains active after being CLICKED
-
-
-save score
-save board
-
-save stuff:
-  event on score change
-  event on level update
-  event on place rune - update board state save
-    - format?
-  event on discard rune - engine level
-
-  new game should remove curent game save info: score, level, graveyard state, board state
-
-  ** on initialize, check level def version vs. saved version; delete in compatible data
-
-  need to capture
-  rune cell depth index
-  runetile, if Any
-
-  probbaly need to modify grave renderer to accept rune tiles, not just elements
-
-
-restore stuff:
-
-
-placement indicator
 
 rune box for mobile
 
-new game button
+persist current rune - prevent refresh cheating
+placement indicator
 
 end game
   prevent click event - probably done
