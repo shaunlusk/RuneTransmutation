@@ -1,11 +1,6 @@
 bugs:
   new game button remains active after being CLICKED
 
-game over: clear save data
-save stuff:
-  ** on initialize, check level def version vs. saved version; delete in compatible data - done?
-
-
 placement indicator
 hide new game button between levels
 rune box for mobile
