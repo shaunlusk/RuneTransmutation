@@ -1,11 +1,9 @@
 bugs:
-  button placement
   new game button remains active after being CLICKED
 
-level display
-
+game over: clear save data
 save stuff:
-  ** on initialize, check level def version vs. saved version; delete in compatible data
+  ** on initialize, check level def version vs. saved version; delete in compatible data - done?
 
 
 placement indicator
