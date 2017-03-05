@@ -2,7 +2,6 @@ bugs:
   new game button remains active after being CLICKED
 
 placement indicator
-hide new game button between levels
 rune box for mobile
 
 persist current rune - prevent refresh cheating
