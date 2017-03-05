@@ -1,10 +1,10 @@
 bugs:
   new game button remains active after being CLICKED
 
-placement indicator
 rune box for mobile
 
 persist current rune - prevent refresh cheating
+placement indicator
 
 end game
   prevent click event - probably done
