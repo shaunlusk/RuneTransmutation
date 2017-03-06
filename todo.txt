@@ -1,18 +1,15 @@
+Show goal
+instructions
+
 bugs:
   new game button remains active after being CLICKED
 
-rune box for mobile
-
 persist current rune - prevent refresh cheating
-placement indicator
 
-end game
-  prevent click event - probably done
 
+Old - Still applicable?
 transfer rune directly from float to foregroundLayer
 -- but will not be dirty - how to fix?
 
 engine level character renderer
  ``` pix renderer?
-
-replace game engine event notification system with mixin from common
