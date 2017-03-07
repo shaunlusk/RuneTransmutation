@@ -1,7 +1,6 @@
 instructions
-
-bugs:
-  new game button remains active after being CLICKED
+title
+web link
 
 Old - Still applicable?
 transfer rune directly from float to foregroundLayer
