@@ -3,8 +3,6 @@ instructions
 bugs:
   new game button remains active after being CLICKED
 
-persist current rune - prevent refresh cheating
-
 Old - Still applicable?
 transfer rune directly from float to foregroundLayer
 -- but will not be dirty - how to fix?
