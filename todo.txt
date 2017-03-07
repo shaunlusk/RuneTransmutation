@@ -1,10 +1,5 @@
 instructions
-title
 web link
 
-Old - Still applicable?
-transfer rune directly from float to foregroundLayer
--- but will not be dirty - how to fix?
-
-engine level character renderer
- ``` pix renderer?
+transfer rune directly from float to foregroundLayer when placing rune, as with graveyard
+engine level character renderer for bgLayer and text elements / buttons

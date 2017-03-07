@@ -53,19 +53,12 @@
 <body>
   <div id="content">
   </div>
-  <!-- <div id="mouseInfo" style="padding:20 0 0 0;">
-    <table>
-      <tr><td>x</td><td width="32px">&nbsp;</td><td>y</td><td width="32px">&nbsp;</td></tr>
-      <tr><td>scaledX</td><td>&nbsp;</td><td>scaledY</td><td>&nbsp;</td></tr>
-      <tr><td>col</td><td>&nbsp;</td><td>row</td><td>&nbsp;</td></tr>
-    </table>
-  </div> -->
   <script type="text/javascript">
   var RuneTx = RuneTx || {};
   RuneTx.GameContext = RuneTx.GameContext || {};
 
   var config = {
-      "rows" : 32,
+      "rows" : 34,
       "cols" : 34,
       "scaleX" : 2,
       "scaleY" : 2,
@@ -83,17 +76,6 @@
     screen = new C64Style.Screen(targetDiv, config);
     screen.initialize();
 
-    // screen.on("MOUSE_MOVE", function(e) {
-    //   var elem = document.getElementById("mouseInfo");
-    //   var boardCoords = gameEngine._getBoardCoords(e);
-    //   elem.innerHTML = "<table>" +
-    //   "<tr><td>x</td><td width='32px'>" + e.data.x + "</td><td>y</td><td width='32px'>" + e.data.y + "</td></tr>" +
-    //     "<tr><td>scaledX</td><td width='32px'>" + e.data.scaledX + "</td><td>scaledY</td><td width='32px'>" + e.data.scaledY + "</td></tr>" +
-    //     "<tr><td>col</td><td width='32px'>" + e.data.col + "</td><td>row</td><td width='32px'>" + e.data.row + "</td></tr>" +
-    //     "<tr><td>boardX</td><td width='32px'>" + boardCoords.x + "</td><td>boardY</td><td width='32px'>" + boardCoords.y + "</td></tr>" +
-    //     "</table>";
-    // });
-
     textLayer = new RuneTx.BackgroundLayer(screen, RuneTx.createCanvas(targetDiv, screen.getWidth(), screen.getHeight()), {width:screen.getWidth(), height:screen.getHeight()});
     screen.addLayer(textLayer);
     gfxLayer = screen.createLayer("GfxLayer");
@@ -108,12 +90,12 @@
 
     var props = {
       boardOffsetX : 32,
-      boardOffsetY : 8,
+      boardOffsetY : 24,
       levelDefinitions : RuneTx.levelDefinitions,
       levelDefinitionsVersion : RuneTx.levelDefinitionsVersion,
       discardsAllowed : 3,
       graveOffsetX : 1 *  C64Style.CELLWIDTH,
-      graveOffsetY : 20 * C64Style.CELLHEIGHT,
+      graveOffsetY : 23 * C64Style.CELLHEIGHT,
       screenContext: screen,
       backgroundLayer: textLayer,
       foregroundLayer: gfxLayer,
