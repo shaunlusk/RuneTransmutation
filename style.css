@@ -38,3 +38,7 @@ a {
 table, th, td {
     border: 1px solid white;
 }
+
+.center {
+  margin : auto
+}
