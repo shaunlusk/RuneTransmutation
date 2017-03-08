@@ -41,17 +41,24 @@
   <script type="text/javascript" src="./lib/BoardForeground.js"></script>
   <script type="text/javascript" src="./lib/GameBoard.js"></script>
   <script type="text/javascript" src="./lib/GameStorage.js"></script>
+  <script type="text/javascript" src="./lib/LevelJumpManager.js"></script>
   <script type="text/javascript" src="./lib/GameEngine.js"></script>
   <script type="text/javascript" src="LevelDefinitions.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
-#content {
-  margin : auto
+#levelJump {
+  padding-top: 10px
 }
 </style>
 </head>
 <body>
-  <div id="content">
+  <div id="content" class="center">
+  </div>
+  <div id="levelJump" class="center">
+  </div>
+  <div id="instructions" class="center">
+    <h3>How To Play</h3>
+    <p></p>
   </div>
   <script type="text/javascript">
   var RuneTx = RuneTx || {};
@@ -67,8 +74,8 @@
       "backgroundColor" : C64Style.Color.BLACK
     };
 
-  var screen = null, textLayer = null, gfxLayer, floatLayer;
-  var gameboard = null, gameEngine = null;
+  var screen = null, textLayer = null, gfxLayer, floatLayer,
+    gameboard = null, gameEngine = null, ljManager = null;
 
   function initialize(targetDiv, config) {
 
@@ -103,6 +110,15 @@
       textFloatLayer: textFloatLayer
     };
     gameEngine = new RuneTx.GameEngine(props);
+
+
+    var ljConfig = {
+      "targetElement":document.getElementById("levelJump"),
+      gameEngine:gameEngine,
+      textColor:C64Style.Color.GREY
+    };
+    ljManager = new RuneTx.LevelJumpManager(ljConfig);
+
     if (RuneTx.GameStorage.savedGameExists()) {
       gameEngine.loadSavedGame();
     } else {
