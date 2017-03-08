@@ -1,9 +1,6 @@
 instructions
 readmemd
-license
-web link
 
-level skip
 
 transfer rune directly from float to foregroundLayer when placing rune, as with graveyard
 engine level character renderer for bgLayer and text elements / buttons
