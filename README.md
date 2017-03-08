@@ -55,6 +55,8 @@ The goal of the game is to transform the color of the board.  Each rune placed
 
 **__Tips:__**
   Each level increases difficulty by adding additional rune symbols, or colors, that can pop up.  Higher
-  levels will require each board tile to be transmuted multiple times.
+  levels will require each board tile to be transmuted multiple times.  
+  Be careful! Many rune symbols are similar (but not identical!) to others.  Likewise, at higher levels
+  color shades may be similar as well.
 
 A current version of the game is hosted at https://shaunlusk.github.io/RuneTransmutation
