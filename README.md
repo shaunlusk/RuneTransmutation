@@ -1,6 +1,10 @@
 # RuneTransmutation
 ## A simple puzzle game
 
+Requires shaunlusk/C64Style.  Install with bower:
+
+    bower install
+
 The goal of the game is to transform the color of the board.  Each rune placed
   on the board will change the color of the board under the rune.  Early levels
   only require changing the color of each board tile once (from darkgrey to blue), but higher levels
