@@ -186,6 +186,7 @@
 
     if (RuneTx.GameStorage.savedGameExists()) {
       gameEngine.loadSavedGame();
+      ljManager.loadSelectedLevel();
     } else {
       gameEngine.initializeSaveGame();
       gameEngine.startRound(0);
